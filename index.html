@@ -7,9 +7,7 @@
     <title>FuZionData</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    
     <style>
-        
         body,
         html {
             height: 100%;
@@ -39,23 +37,22 @@
 <body>
     <div id="particles"></div>
     <div class="container text-center d-flex align-items-center justify-content-center" style="z-index: 2;">
-            <div class="">
-                        <h1 class="display-4">Hi there</h1>
-                        <p class="lead">You found the future home of FuZionData</p>
-                        <p class="lead">We aren't quite ready yet...</p>
-            </div>
+        <div class="">
+            <h1 class="display-4">Hi there</h1>
+            <p class="lead">You found the future home of FuZionData</p>
+            <p class="lead">We aren't quite ready yet...</p>
+        </div>
     </div>
-       
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js" integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2/particles.min.js"></script>
+    <script src="https://unpkg.com/particles.js@2.0.0/particles.js" integrity="sha384-AWFROZ10DoeXcNjhoQe0agryexFsipZEA17Cde6/tknpOUacvUGk27vXQ2a6ljSt" crossorigin="anonymous"></script>    
+    <script src="particles.config.js"></script>
     <script>
     $(document).ready(function() { 
         $('body').bootstrapMaterialDesign(); 
-        particlesJS.load("particles", "https://rawgit.com/teh-random-name/fuziondata-site/master/particales-payload.json", function() {
-            console.log("particles.js loaded");
-        });
+        particlesJS("particles", jsonObject);
     });
     </script>
 </body>

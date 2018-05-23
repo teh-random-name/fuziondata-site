@@ -42,11 +42,11 @@
         <div class="jumbotron splash-container">
             <div id="particles"></div>            
             <div class="d-flex align-items-center dot-overlay">
-                    <div class="container">
-                            <h1 class="text-center display-3">Hello, world!</h1>
-                            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                            <p><a class="btn btn-raised btn-info" href="#" role="button">Learn more &raquo;</a></p>
-                        </div>
+                <div class="container">
+                    <h1 class="text-center display-3">Hello, world!</h1>
+                    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                    <p><a class="btn btn-raised btn-info" href="#" role="button">Learn more &raquo;</a></p>
+                </div>
             </div>
         </div>
     
@@ -82,22 +82,21 @@
         <hr>
         <footer>
             <div class="container">
-                    <p>footer content</p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p>footer content</p>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
             </div>
         </footer>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js" integrity="sha384-fJU6sGmyn07b+uD1nMk7/iSb4yvaowcueiQhfVgQuD98rfva8mcr1eSvjchfpMrH" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2/particles.min.js"></script>
+    <script src="https://unpkg.com/particles.js@2.0.0/particles.js" integrity="sha384-AWFROZ10DoeXcNjhoQe0agryexFsipZEA17Cde6/tknpOUacvUGk27vXQ2a6ljSt" crossorigin="anonymous"></script>    
+    <script src="particles.config.js"></script>
     <script>
     $(document).ready(function() { 
         $('body').bootstrapMaterialDesign(); 
-        particlesJS.load("particles", "https://rawgit.com/teh-random-name/fuziondata-site/master/particales-payload.json", function() {
-            console.log("particles.js loaded");
-        });
+        particlesJS("particles", jsonObject);
     });
     </script>
     </body>
