@@ -9,7 +9,7 @@
         <title>Hello, world!</title>
         <style>
             .splash-container {
-                height: 80vh;
+                height: 100vh;
                 z-index: 1; 
                 overflow: hidden; 
                 width: 100%;
@@ -18,14 +18,14 @@
                 position: fixed !important;
             }
             .after-splash {
-                box-shadow: 0px -3px 30px -10px rgba(0,0,0,0.40);
+                /* box-shadow: 0px -3px 30px -10px rgba(0,0,0,0.40); */
                 position: absolute;
                 width: 100%;
                 min-height: 12%;
                 padding-top: 1em;
                 z-index: 2;
-                background-color: white;
-                top: 80%;
+                background-color: transparent;
+                top: 90%;
             }
             .dot-overlay {
                 position: absolute;
@@ -34,14 +34,70 @@
                 width: 100%;
                 height: 100%;
             }
+            .navbar {
+                z-index: 3;
+            }
+            svg.before-item {
+                transform: rotateX(180deg) translateY(-8px);
+                fill: #bcbcff;
+            }
+            svg.after-item {
+                transform:  translateY(-1px);
+                fill: #bcbcff;
+                margin-bottom: 6em;
+            }
+            div.row .container-fluid {
+                background-color: #bcbcff;
+            }
         </style>
     </head>
 
     <body>
-        
+
+        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+            <button class="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse"
+                data-target="#mainNavBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="container">
+                    <div class="collapse navbar-collapse" id="mainNavBar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+
+        </nav>
+
         <div class="jumbotron splash-container">
             <div id="particles"></div>            
-            <div class="d-flex align-items-center dot-overlay">
+            <div id="herounit" class="d-flex align-items-center dot-overlay">
                 <div class="container">
                     <h1 class="text-center display-3">Hello, world!</h1>
                     <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
@@ -51,32 +107,76 @@
         </div>
     
     <div class="after-splash">
-        <div class="container">
+        <svg class="before-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2600 131.1" preserveAspectRatio="none">
+            <path d="M0 0L2600 0 2600 69.1 0 0z"></path>
+            <path style="opacity:0.5" d="M0 0L2600 0 2600 69.1 0 69.1z"></path>
+            <path style="opacity:0.25" d="M2600 0L0 0 0 130.1 2600 69.1z"></path>
+        </svg>
+        <div class="container-fluid">
             <div class="row align-items-start">
-                <div class="col-lg-12 h-100">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-raised btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                <div class="container-fluid">
+                        <div class="container">
+                                <div class="col-lg-12 h-100">
+                                        <h2>Heading</h2>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                        <p><a class="btn btn-raised btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                                    </div>
+                        </div>
                 </div>
-                <div class="col-lg-12 h-100">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-raised btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                <svg class="after-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2600 131.1" preserveAspectRatio="none" >
+                    <path d="M0 0L2600 0 2600 69.1 0 0z"></path>
+                    <path style="opacity:0.5" d="M0 0L2600 0 2600 69.1 0 69.1z"></path>
+                    <path style="opacity:0.25" d="M2600 0L0 0 0 130.1 2600 69.1z"></path>
+                </svg>
+
+                <svg class="before-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2600 131.1" preserveAspectRatio="none">
+                    <path d="M0 0L2600 0 2600 69.1 0 0z"></path>
+                    <path style="opacity:0.5" d="M0 0L2600 0 2600 69.1 0 69.1z"></path>
+                    <path style="opacity:0.25" d="M2600 0L0 0 0 130.1 2600 69.1z"></path>
+                </svg>
+                <div class="container-fluid">
+                    <div class="container">
+                            <div class="col-lg-12 h-100">
+                                    <h2>Heading</h2>
+                                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                    <p><a class="btn btn-raised btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                                </div>
+                    </div>
+            </div>
+            <svg class="after-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2600 131.1" preserveAspectRatio="none" >
+                <path d="M0 0L2600 0 2600 69.1 0 0z"></path>
+                <path style="opacity:0.5" d="M0 0L2600 0 2600 69.1 0 69.1z"></path>
+                <path style="opacity:0.25" d="M2600 0L0 0 0 130.1 2600 69.1z"></path>
+            </svg>
+
+            <svg class="before-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2600 131.1" preserveAspectRatio="none">
+                <path d="M0 0L2600 0 2600 69.1 0 0z"></path>
+                <path style="opacity:0.5" d="M0 0L2600 0 2600 69.1 0 69.1z"></path>
+                <path style="opacity:0.25" d="M2600 0L0 0 0 130.1 2600 69.1z"></path>
+            </svg>
+            <div class="container-fluid">
+                <div class="container">
+                        <div class="col-lg-12 h-100">
+                                <h2>Heading</h2>
+                                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                                <p><a class="btn btn-raised btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                            </div>
                 </div>
-                <div class="col-lg-12 h-100">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn btn-raised btn-secondary" href="#" role="button">View details &raquo;</a></p>
-                </div>
+        </div>
+        <svg class="after-item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2600 131.1" preserveAspectRatio="none" >
+            <path d="M0 0L2600 0 2600 69.1 0 0z"></path>
+            <path style="opacity:0.5" d="M0 0L2600 0 2600 69.1 0 69.1z"></path>
+            <path style="opacity:0.25" d="M2600 0L0 0 0 130.1 2600 69.1z"></path>
+        </svg>
             </div>
         </div>
         <hr>
@@ -93,10 +193,25 @@
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/particles.js@2.0.0/particles.js" integrity="sha384-AWFROZ10DoeXcNjhoQe0agryexFsipZEA17Cde6/tknpOUacvUGk27vXQ2a6ljSt" crossorigin="anonymous"></script>    
     <script src="particles.config.js"></script>
+    <style>
+    .forceHide {
+        display: none !important
+    }
+    </style>
     <script>
     $(document).ready(function() { 
         $('body').bootstrapMaterialDesign(); 
         particlesJS("particles", jsonObject);
+
+        $(document).on("scroll wheel", function() {
+            console.log($(document).scrollTop())
+            if($(document).scrollTop() > 570){
+                $('#herounit').toggleClass("forceHide", true);
+            } else {
+                $('#herounit').toggleClass("forceHide", false);
+            }
+            
+        });
     });
     </script>
     </body>
