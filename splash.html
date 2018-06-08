@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="apple-mobile-web-app-title" content="FuzionData Solutions">
+        <meta name="application-name" content="FuzionData Solutions">
+        <meta name="msapplication-TileColor" content="#254478">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta property="og:image" content="/og-image.jpg">
+        <meta property="og:image:height" content="1257">
+        <meta property="og:image:width" content="2400">
+        <meta property="og:description" content="">
+        <meta property="og:title" content="Fuziondata Solutions">
+        <meta property="og:url" content="http://fuziondata.com/">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
@@ -39,14 +59,14 @@
             }
             svg.before-item {
                 transform: rotateX(180deg) translateY(-8px);
-                fill: #bcbcff;
+                fill: #13A4CC;
             }
             svg.after-item {
-                transform:  translateY(-1px);
-                fill: #bcbcff;
+                transform:  translateY(-1px) scale(-1, 1);
+                fill: #13A4CC;
             }
             div.row .container-fluid {
-                background-color: #bcbcff;
+                background-color: #13A4CC;
             }
             .flex-item {
                 margin-bottom: 6em; 
@@ -213,7 +233,7 @@
     <script src="particles.config.js"></script>
     <style>
     .forceHide {
-        display: none !important
+        filter: blur(5px);
     }
     </style>
     <script>
@@ -226,7 +246,7 @@
         }
 
         $(document).on("scroll wheel", function() {
-            console.log($(document).scrollTop())
+            //console.log($(document).scrollTop())
             if($(document).scrollTop() > 570){
                 $('#herounit').toggleClass("forceHide", true);
             } else {
