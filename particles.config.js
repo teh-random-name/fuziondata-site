@@ -9,7 +9,7 @@ var jsonObject =
         }
       },
       "color": {
-        "value": "#434ef7"
+        "value": "#13A4CC"
       },
       "shape": {
         "type": "circle",
@@ -49,7 +49,7 @@ var jsonObject =
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#5994ff",
+        "color": "#254478",
         "opacity": 0.4,
         "width": 1
       },
