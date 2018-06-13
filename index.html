@@ -27,6 +27,7 @@
     <title>FuzionData</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons|Orbitron">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <style>
         body,
         html {
@@ -51,6 +52,14 @@
             height: 99vh;
             z-index: 1;
         }
+
+        #social-links a {
+            font-size: 5vh;
+            padding-left: 2px;
+            padding-right: 2px;
+            color: #04a7ca;
+            transition: all 600ms cubic-bezier(.55,.055,.675,.19);
+        }
     </style>
 </head>
 
@@ -61,6 +70,11 @@
             <img class="img-fluid" src="/img/mainlogo.png">
             <hr>
             <p class="lead">Coming soon...</p>
+            <div id="social-links" class="text-center d-flex align-items-center justify-content-center">
+                <a class="fab fa-linkedin" href="https://www.linkedin.com/company/fuziondata/"></a>
+                <a class="fab fa-twitter-square" href="https://twitter.com/FuzionData"></a>
+                <a class="fab fa-facebook-square" href="https://www.facebook.com/fuziondata/"></a>
+            </div>
         </div>
     </div>
      
